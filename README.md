@@ -13,7 +13,7 @@ Free host later: GitHub Pages / Cloudflare Pages / Netlify — drop this folder;
 
 ## Wire the form (free)
 
-The form ships with `action="#"`. Until you set a real endpoint, submit only shows a local “You're on the list” state (no email stored).
+The live endpoint is `https://formspree.io/f/xqppdwdw`. Submissions POST to Formspree.
 
 ### Option A — Formspree (free tier)
 
