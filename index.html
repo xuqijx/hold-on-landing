@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hold On — Cool down before you buy</title>
+  <meta name="description" content="Share a product, cool down by price, decide later. One-time $9.99. No ads, no subscription." />
+  <meta name="theme-color" content="#0b0d10" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #14181f;
+      --border: #232a35;
+      --text: #e8ecf1;
+      --muted: #9aa3b2;
+      --accent: #5b8cff;
+      --accent-hover: #7aa0ff;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 28rem;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      min-height: 100dvh;
+    }
+    a { color: var(--accent); }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.25rem 1.1rem 3rem;
+    }
+    header {
+      padding: 0.5rem 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+    }
+    .logo span { color: var(--muted); font-weight: 500; }
+    .badge {
+      font-size: 0.72rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+    }
+    h1 {
+      font-size: clamp(1.55rem, 5.5vw, 1.9rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.75rem;
+      font-weight: 700;
+    }
+    .pain {
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin: 0 0 1.75rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.1rem;
+      margin-bottom: 1.1rem;
+    }
+    .card h2 {
+      margin: 0 0 0.9rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    ol.steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      counter-reset: step;
+    }
+    ol.steps li {
+      position: relative;
+      padding: 0.65rem 0 0.65rem 2.4rem;
+      border-top: 1px solid var(--border);
+      counter-increment: step;
+    }
+    ol.steps li:first-child { border-top: 0; padding-top: 0; }
+    ol.steps li:last-child { padding-bottom: 0; }
+    ol.steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 1.55rem;
+      height: 1.55rem;
+      border-radius: 50%;
+      background: #1c2430;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ol.steps li:first-child::before { top: 0.05rem; }
+    ol.steps strong { display: block; font-size: 0.98rem; margin-bottom: 0.15rem; }
+    ol.steps p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: 750;
+      letter-spacing: -0.03em;
+    }
+    .price small {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .price-note {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+    }
+    .tag {
+      font-size: 0.75rem;
+      color: var(--ok);
+      background: rgba(62, 207, 142, 0.08);
+      border: 1px solid rgba(62, 207, 142, 0.25);
+      border-radius: 999px;
+      padding: 0.22rem 0.55rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    input[type="email"] {
+      width: 100%;
+      appearance: none;
+      border: 1px solid var(--border);
+      background: #0e1218;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 0.85rem 0.95rem;
+      font-size: 1rem;
+      outline: none;
+    }
+    input[type="email"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.2);
+    }
+    button[type="submit"] {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 0.95rem 1rem;
+      font-size: 1rem;
+      font-weight: 650;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: var(--accent-hover); }
+    button[type="submit"]:active { transform: translateY(1px); }
+    .form-hint {
+      margin: 0.35rem 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Hold On <span>· cool down</span></div>
+      <div class="badge">Coming soon</div>
+    </header>
+
+    <h1>That Buy button hits different when you wait.</h1>
+    <p class="pain">
+      You already know you’ll regret the tap — Hold On catches the urge at share time, not after the charge.
+    </p>
+
+    <section class="card" aria-labelledby="how">
+      <h2 id="how">How it works</h2>
+      <ol class="steps">
+        <li>
+          <strong>Share a product</strong>
+          <p>From any shopping app, share the item into Hold On.</p>
+        </li>
+        <li>
+          <strong>Cool down by price</strong>
+          <p>A wait timer scales with what it costs — bigger tickets wait longer.</p>
+        </li>
+        <li>
+          <strong>Decide later</strong>
+          <p>When time’s up: buy, or let it go — and see what you didn’t spend.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="price">
+      <h2 id="price">Price</h2>
+      <div class="price-row">
+        <div class="price">$9.99 <small>one-time unlock</small></div>
+      </div>
+      <p class="price-note">Pay once. Keep it. No account required to try the wait.</p>
+      <div class="tags">
+        <span class="tag">No ads</span>
+        <span class="tag">No subscription</span>
+        <span class="tag">iOS · App Store</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="notify">
+      <h2 id="notify">Early access</h2>
+      <!-- Replace action with Formspree / Tally endpoint — see README.md beside this file -->
+      <form action="#" method="POST" id="intent-form">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+          inputmode="email"
+          placeholder="you@example.com"
+        />
+        <input type="hidden" name="_subject" value="Hold On launch notify" />
+        <button type="submit">Notify me when it launches</button>
+        <p class="form-hint">We’ll only email when Hold On is ready. No spam.</p>
+      </form>
+    </section>
+
+    <footer>
+      Hold On · share → cool-down → decide · $9.99 unlock
+    </footer>
+  </div>
+
+  <script>
+    // Placeholder: until Formspree/Tally is wired, show a local confirmation.
+    document.getElementById("intent-form").addEventListener("submit", function (e) {
+      if (this.getAttribute("action") === "#" || this.getAttribute("action") === "") {
+        e.preventDefault();
+        var btn = this.querySelector('button[type="submit"]');
+        btn.textContent = "You're on the list";
+        btn.disabled = true;
+        btn.style.opacity = "0.85";
+      }
+    });
+  </script>
+</body>
+</html>
