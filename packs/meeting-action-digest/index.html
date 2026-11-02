@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meeting→Action Digest — Chase Actions After the Call</title>
+  <meta name="description" content="One paste → owner+due digest, then weekly chase + a one-page reopen rule — not a notes→table dump (and not Clear Meeting Kit’s $9 template lane). For IC leads, consultants, and ops freelancers who personally chase 3–10 meetings/week. Core $29 for sale · Pro Coming soon." />
+  <meta property="og:title" content="Meeting→Action Digest — Chase Actions After the Call" />
+  <meta property="og:description" content="One paste → owner+due digest, then weekly chase + a one-page reopen rule — not a notes→table dump (and not Clear Meeting Kit’s $9 template lane). Core $29." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .price-row {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .price {
+      font-size: 1.75rem; font-weight: 700; color: var(--text);
+    }
+    .price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pill {
+      font-size: 0.8rem; padding: 0.3rem 0.6rem; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    .pain li { margin-bottom: 0.35rem; }
+    .check { list-style: none; padding-left: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .who { color: var(--muted); }
+    .tiers { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .tiers { grid-template-columns: 1.1fr 0.9fr; } }
+    .tier-featured { border-color: #3d5f9a; box-shadow: inset 0 0 0 1px #3d5f9a; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--warn); margin-bottom: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .quote {
+      border-left: 3px solid var(--accent2);
+      padding-left: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 1.25rem 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">IC leads · consultants · ops freelancers · 3–10/week · personally chase</div>
+    <h1>Chase actions after the call.</h1>
+    <p class="lede">
+      <strong style="color:var(--text)">Meeting→Action Digest</strong> —
+      one paste → <strong style="color:var(--text)">owner+due digest</strong>, then weekly chase + a one-page reopen rule —
+      not a notes→table dump (and not Clear Meeting Kit’s $9 template lane).
+      You still run the meeting. No bot joins your calls.
+    </p>
+
+    <div class="price-row">
+      <div class="price">$29 <span>Core · one-time</span></div>
+      <span class="pill">Core $29 for sale · Pro $49 Coming soon</span>
+    </div>
+
+    <!-- Replace href when Gumroad live -->
+    <a class="cta" id="buy" href="#buy-note">Get Meeting→Action Digest — $29</a>
+    <span class="cta-note" id="buy-note">Checkout link goes live after Gumroad KYC. This Pages build is ready for the URL swap.</span>
+
+    <h2>The pain (if this stings, it’s for you)</h2>
+    <div class="card">
+      <ul class="pain">
+        <li>Meetings end with sticky Docs and zero named owners.</li>
+        <li>Action items vanish into Slack threads until the same decision returns next week.</li>
+        <li>You personally chase follow-ups across 3–10 meetings a week — without a board that answers “who’s overdue?”</li>
+        <li>Pretty note templates don’t fix the chase. Re-discussing does the damage.</li>
+      </ul>
+    </div>
+
+    <p class="quote">“The product isn’t prettier notes. It’s an owner-chase loop you can run in ten minutes after the call.”</p>
+
+    <h2>What’s inside Core</h2>
+    <ul class="check">
+      <li><strong style="color:var(--text)">Hero prompt</strong> — paste messy notes once → one digest with <em>owner + due on every action</em> (no second cleanup prompt).</li>
+      <li><strong style="color:var(--text)">Notion-style structure (Markdown)</strong> — Meetings, Actions, Stakeholders + views (This week due / Blocked / By owner / Needs decision). Board supports the chase; it isn’t the hero.</li>
+      <li><strong style="color:var(--text)">Prompt pack (5)</strong> — hero digest, optional refine, decision log, nudge-owner Slack/email, parking-lot sorter (variables + real example outputs).</li>
+      <li><strong style="color:var(--text)">SOP one-pagers (3)</strong> — ≤10-min post-meeting ritual, weekly action sweep, one-page decision reopen rule.</li>
+    </ul>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Built for</h3>
+        <ul>
+          <li><strong style="color:var(--text)">IC leads, consultants, and ops freelancers</strong> who <strong style="color:var(--text)">personally chase</strong> follow-ups across <strong style="color:var(--text)">3–10 meetings/week</strong></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not built for</h3>
+        <ul>
+          <li>Enterprise PMO / program managers buying org-wide meeting systems</li>
+          <li>People who want AI to join Zoom/Meet</li>
+          <li>Jira/Linear replacements or OKR frameworks</li>
+          <li>“Meeting-free culture” miracle promises</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>How you use it this week</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Duplicate the databases</h3><p>Meetings · Actions · Stakeholders. Wire relations. Turn on This week due / Blocked / Needs decision.</p></div>
+      <div class="card"><h3>2. Run the hero prompt</h3><p>Paste messy notes once → digest + owned actions. Save rows. ASK for unknowns — never invent owners or dues.</p></div>
+      <div class="card"><h3>3. Ritual in ≤10 minutes</h3><p>Held → Digested. Parking-lot noise stays off the P0 board.</p></div>
+      <div class="card"><h3>4. Sweep weekly · nudge · guard reopens</h3><p>Chase from views. Decision reopen is a one-page rule — not another debate.</p></div>
+    </div>
+
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="card tier-featured">
+        <div class="tag">Ship today</div>
+        <h3>Core — $29</h3>
+        <p>Hero single-run prompt, Notion MD specs, 5 prompts, 3 SOPs. Design goal: make casually reopening the same decision next Monday harder — if you run the one-page reopen rule.</p>
+        <a class="cta" href="#buy-note" style="margin-top:0.75rem">Buy Core</a>
+      </div>
+      <div class="card">
+        <div class="tag">Coming soon</div>
+        <h3>Pro — $49</h3>
+        <p>Not for sale yet. Planned later: recurring meeting templates, RACI mini-sheet, no-meeting async update prompt + one-pager, Actions CSV twin, 6-min setup Loom outline, <strong style="color:var(--text)">optional CN one-pager</strong>. Core is the live product — Pro assets are not in the Core download.</p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Does this join my Zoom/Meet or transcribe calls?</h3>
+      <p>No. You paste notes you already have. Any solid LLM structures them. There is no live bot, plugin, or transcription SaaS in this pack.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this a downloadable .notion file?</h3>
+      <p>No — you get clear Markdown property lists and views so you can recreate the system in any Notion workspace without brittle imports.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Which AI do the prompts work with?</h3>
+      <p>ChatGPT, Claude, Grok, or any solid LLM. Variables are marked; example outputs show the bar. Missing inputs → the prompt asks — it shouldn’t invent owners or dues.</p>
+    </div>
+    <div class="card">
+      <h3>Is this a project-management tool?</h3>
+      <p>No. It’s an owner-chase loop for meeting follow-ups — not a Jira/Linear/Asana clone and not an OKR framework.</p>
+    </div>
+
+    <h2>Free taste</h2>
+    <p class="who">Grab the free brief <em>Meeting Red Flags → Action Checklist</em>, then upgrade to the full kit when you’re ready.</p>
+    <p><a href="./lead-magnet-meeting-red-flags.md">Read the lead-magnet text</a> (PDF export optional).</p>
+
+    <footer>
+      <p>Meeting→Action Digest · Independent digital product · Not affiliated with Notion, Inc.</p>
+      <p>Questions after purchase: reply to your receipt email.</p>
+    </footer>
+  </main>
+</body>
+</html>
