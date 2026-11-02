@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fit-Score Search Kit — Not another Notion tracker OS</title>
+  <meta name="description" content="Spray applications without a fit score and nothing is tailored — interviews never show up. Fit scorecard → one truthful tailored résumé-bullet pack in ≤15 minutes. Core $29. No interview or salary guarantees." />
+  <meta property="og:title" content="Fit-Score Search Kit" />
+  <meta property="og:description" content="Not another Notion tracker OS — scorecard first → one truthful bullet pack. Core $29." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .price-row {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .price {
+      font-size: 1.75rem; font-weight: 700; color: var(--text);
+    }
+    .price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pill {
+      font-size: 0.8rem; padding: 0.3rem 0.6rem; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    .pain li { margin-bottom: 0.35rem; }
+    .check { list-style: none; padding-left: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .who { color: var(--muted); }
+    .tiers { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .tiers { grid-template-columns: 1.1fr 0.9fr; } }
+    .tier-featured { border-color: #3d5f9a; box-shadow: inset 0 0 0 1px #3d5f9a; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--warn); margin-bottom: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .quote {
+      border-left: 3px solid var(--accent2);
+      padding-left: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 1.25rem 0;
+    }
+    .hero-steps {
+      display: grid; gap: 0.75rem; margin: 1.25rem 0 0;
+    }
+    .hero-steps .card { padding: 0.9rem 1rem; }
+    .hero-steps strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">For IC → mid-manager · focused 5–15 role search</div>
+    <h1>Fit-Score Search Kit</h1>
+    <p class="lede">
+      <strong style="color:var(--text)">Not another Notion tracker OS</strong> —
+      <strong style="color:var(--text)">scorecard first → one truthful bullet pack</strong>
+      you can finish in ≤15 minutes — then Notion boards and SOPs for a focused weekly loop.
+      No spray. No ATS black-hat. No interview or salary guarantees.
+    </p>
+
+    <div class="price-row">
+      <div class="price">$29 <span>Core · one-time</span></div>
+      <span class="pill">Pro $49 Coming soon · Core ships now</span>
+    </div>
+
+    <!-- Replace href when Gumroad live -->
+    <a class="cta" id="buy" href="#buy-note">Get Fit-Score Search Kit — $29</a>
+    <span class="cta-note" id="buy-note">Checkout link goes live after Gumroad KYC. This Pages build is ready for the URL swap.</span>
+
+    <h2>First win (the hero path)</h2>
+    <div class="hero-steps">
+      <div class="card"><strong>1. Fit scorecard</strong><p>One target JD + your real proof → score, band, gaps, apply/skip call.</p></div>
+      <div class="card"><strong>2. Tailored bullet pack</strong><p>Rewrite one pack of <strong style="color:var(--text)">4–6</strong> bullets from facts you can defend. Hard-refuses fake jobs, inflated %, keyword spam.</p></div>
+      <div class="card"><strong>3. Then the loop</strong><p>Log Targets / Applications / Interviews. Follow up. Prep STAR. Still your search — not a placement agency.</p></div>
+    </div>
+
+    <h2>The one pain (if this stings, it’s for you)</h2>
+    <div class="card">
+      <ul class="pain">
+        <li>You spray applications <em>without a fit score</em>, so nothing is tailored — and interviews never show up.</li>
+      </ul>
+      <p style="margin:0.75rem 0 0;color:var(--muted);font-size:0.95rem;">That’s the nail. Not a laundry list of “tabs + ghosting + cadence.” Those show up later as support — not the pitch.</p>
+    </div>
+
+    <p class="quote">“Score the role before you rewrite a line. One honest bullet pack beats twenty generic applications.”</p>
+
+    <h2>What’s inside Core</h2>
+    <ul class="check">
+      <li><strong style="color:var(--text)">Hero prompts</strong> — fit scorecard (required first) → tailored résumé bullets (truthful only).</li>
+      <li><strong style="color:var(--text)">Notion-style structure (Markdown)</strong> — Targets, Applications, Interviews + views (This week apply / Waiting / Follow-up due / Interview prep). <em>No Network touches DB in Core.</em></li>
+      <li><strong style="color:var(--text)">Prompt pack (6)</strong> — scorecard, bullets, cover note, recruiter follow-up, STAR packager (real examples only), thank-you + debrief.</li>
+      <li><strong style="color:var(--text)">SOP one-pagers (3)</strong> — ≤15-min first win, weekly search block, follow-up cadence (+ day-of interview checklist).</li>
+    </ul>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Built for</h3>
+        <ul>
+          <li>Employed or recently-open IC → mid-manager</li>
+          <li>Focused search of ≈5–15 target roles</li>
+          <li>People willing to score fit before applying</li>
+          <li>Honest tailoring — not keyword theater</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not built for</h3>
+        <ul>
+          <li>Résumé-101 students</li>
+          <li>“Quit tomorrow / 10× salary” buyers</li>
+          <li>Mass-apply bots / LinkedIn automation</li>
+          <li>Guaranteed interviews, offers, salary, or visa advice</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>How you use it this week</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Run the first win</h3><p>One JD → scorecard → one tailored bullet pack in ≤15 minutes. Skip Weak fits on purpose.</p></div>
+      <div class="card"><h3>2. Duplicate the databases</h3><p>Targets · Applications · Interviews. Wire relations. Turn on This week apply / Waiting / Follow-up due / Interview prep.</p></div>
+      <div class="card"><h3>3. Weekly search block</h3><p>Score → tailor → apply → chase. Cap the pipeline at 5–15 roles.</p></div>
+      <div class="card"><h3>4. Interview days</h3><p>STAR from real stories. Thank-you + debrief same day. No fabricated metrics.</p></div>
+    </div>
+
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="card tier-featured">
+        <div class="tag">Core for sale</div>
+        <h3>Core — $29</h3>
+        <p>Scorecard → bullet pack hero path, Notion MD specs, 6 prompts, 3 SOPs. Enough to stop spray-and-pray without a fake offer machine.</p>
+        <a class="cta" href="#buy-note" style="margin-top:0.75rem">Buy Core</a>
+      </div>
+      <div class="card">
+        <div class="tag">Coming soon</div>
+        <h3>Pro — $49</h3>
+        <p>Everything in Core, plus planned extras: niche packs (software/PM, design, ops), offer comparison sheet (no salary guarantees), Network / referral layer, Applications CSV twin, setup Loom outline, optional CN blurb. <strong style="color:var(--text)">Not built yet — do not sell.</strong></p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Will this guarantee interviews or a salary bump?</h3>
+      <p>No. Fit-Score Search Kit helps you score fit and tailor honestly. Outcomes still depend on your market, timing, and work. No FAANG-in-30-days copy anywhere.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this a downloadable .notion file?</h3>
+      <p>No — you get clear Markdown property lists and views so you can recreate the system in any Notion workspace without brittle imports.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Can the résumé prompt stuff ATS keywords or invent jobs?</h3>
+      <p>It hard-refuses ATS black-hat, keyword spam, fake employers, and fabricated metrics. Empty required inputs → it asks; it shouldn’t invent your career.</p>
+    </div>
+    <div class="card">
+      <h3>Is Network / referral tracking included?</h3>
+      <p>Not in Core. Network touches DB + referral ask scripts are listed for Pro (Coming soon).</p>
+    </div>
+
+    <h2>Free taste</h2>
+    <p class="who">Grab the free brief <em>Target Role Scorecard</em>, then upgrade to the full kit when you’re ready.</p>
+    <p><a href="./lead-magnet-target-role-scorecard.md">Read the lead-magnet text</a> (PDF export optional).</p>
+
+    <footer>
+      <p>Fit-Score Search Kit · Independent digital product · Not affiliated with Notion, Inc.</p>
+      <p>Not a placement agency. No interview, offer, salary, or visa guarantees.</p>
+      <p>Questions after purchase: reply to your receipt email.</p>
+    </footer>
+  </main>
+</body>
+</html>
