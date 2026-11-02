@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collections Chase Kit — Net-30 Aging Board for Indie Designers &amp; Devs</title>
+  <meta name="description" content="Aging Board with Chase today, D1/D7/D14→final ladder prompts, and Weekly Collections Hour for indie designers &amp; developers whose Net-30 invoices stretch to 45+. Core $29." />
+  <meta property="og:title" content="Collections Chase Kit — Net-30 Aging Board for Indie Designers &amp; Devs" />
+  <meta property="og:description" content="Not another chase-email pack — a weekly Collections Hour workflow: see what’s due today, then climb D1 → D7 → D14 → final. Core $29." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .price-row {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .price {
+      font-size: 1.75rem; font-weight: 700; color: var(--text);
+    }
+    .price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pill {
+      font-size: 0.8rem; padding: 0.3rem 0.6rem; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    .pain li { margin-bottom: 0.35rem; }
+    .check { list-style: none; padding-left: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .who { color: var(--muted); }
+    .tiers { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .tiers { grid-template-columns: 1.1fr 0.9fr; } }
+    .tier-featured { border-color: #3d5f9a; box-shadow: inset 0 0 0 1px #3d5f9a; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--warn); margin-bottom: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .quote {
+      border-left: 3px solid var(--accent2);
+      padding-left: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 1.25rem 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Indie designers &amp; developers · Net-30 → 45+</div>
+    <h1>Collections Chase Kit — Net-30 Aging Board for Indie Designers &amp; Devs</h1>
+    <p class="lede">
+      <strong style="color:var(--text)">Not another chase-email pack</strong> — a weekly
+      <strong style="color:var(--text)">Collections Hour</strong> workflow: open the
+      <strong style="color:var(--text)">Aging Board → Chase today</strong>, then climb
+      <strong style="color:var(--text)">D1 → D7 → D14 → final</strong>. Age AR, send the right tone on the right day, log touches, and know when to hold work.
+    </p>
+
+    <div class="price-row">
+      <div class="price">$29 <span>Core · one-time · ships</span></div>
+      <span class="pill">Pro $49 · Coming soon</span>
+    </div>
+
+    <!-- GUMROAD_URL -->
+    <!-- Replace href when Gumroad live -->
+    <a class="cta" id="buy" href="#buy-note">Get Collections Chase Kit — $29</a>
+    <span class="cta-note" id="buy-note">Checkout link goes live after Gumroad KYC. This Pages build is ready for the URL swap.</span>
+
+    <h2>The pain (if this stings, it’s for you)</h2>
+    <div class="card">
+      <ul class="pain">
+        <li>Net-30 invoices quietly stretch to day 45+ while you delay the next chase.</li>
+        <li>You know who’s late — but there’s no <em>Chase today</em> view, only inbox archaeology.</li>
+        <li>Day 20 feels the same as day 2 because there’s no tone ladder.</li>
+        <li>You unlock finals “to be nice,” then wait another month with no stop-work path.</li>
+      </ul>
+    </div>
+
+    <p class="quote">“Collections isn’t confrontation. It’s a calendar, a board, and the next dated step.”</p>
+
+    <h2>What’s inside Core</h2>
+    <ul class="check">
+      <li><strong style="color:var(--text)">Aging Board + Chase today</strong> — Notion-style Markdown: Clients, Invoices, Aging Board (one row per open invoice). Views include Chase today, Open AR, aging buckets, and Paid this month.</li>
+      <li><strong style="color:var(--text)">Day-matched ladder prompts</strong> — polite D1 / D7 / D14 + firm final (plus payment-plan reply &amp; thank-you receipt as support).</li>
+      <li><strong style="color:var(--text)">Weekly Collections Hour SOP</strong> — calm weekly ops block, plus escalation ladder and payment plan &amp; stop-work one-pagers.</li>
+    </ul>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Built for</h3>
+        <ul>
+          <li>Indie UI / product designers on Net-30</li>
+          <li>Indie developers whose clients stretch to 45+</li>
+          <li>Solo / tiny studios who chase their own AR</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not built for</h3>
+        <ul>
+          <li>Debt-collection agencies or legal threat playbooks</li>
+          <li>“Guaranteed recovery” shoppers</li>
+          <li>Generic freelance CRM seekers</li>
+          <li>Email-swipe-file-only buyers (no weekly workflow)</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="who" style="margin-top:1rem">
+      <strong style="color:var(--text)">Pairs with Client Guard Kit:</strong> Guard = onboarding &amp; scope defense before work drifts.
+      This pack = overdue cash after Net-30 slips — aging board + chase ladder, not kickoff SOWs.
+    </p>
+
+    <h2>How you use it this week</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Build the board</h3><p>Clients · Invoices · Aging Board. Wire relations. Turn on Chase today, Open AR, and Paid this month.</p></div>
+      <div class="card"><h3>2. Enter open invoices</h3><p>Due dates, amounts, pay links. One Aging Board row per open invoice; set Next chase on.</p></div>
+      <div class="card"><h3>3. Run Collections Hour</h3><p>Same weekly block. Work Chase today → D1 / D7 / D14 / final → log touch → set next date.</p></div>
+      <div class="card"><h3>4. Hold or close cleanly</h3><p>Payment-plan path when needed; stop-work when the ladder ends — no midnight improvisation.</p></div>
+    </div>
+
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="card tier-featured">
+        <div class="tag">Ships today</div>
+        <h3>Core — $29</h3>
+        <p>Aging Board + views, day-matched ladder prompts, Weekly Collections Hour + two supporting SOPs. Enough to professionalize chasing on your next overdue Net-30 invoice.</p>
+        <a class="cta" href="#buy-note" style="margin-top:0.75rem">Buy Core</a>
+      </div>
+      <div class="card">
+        <div class="tag">Coming soon</div>
+        <h3>Pro — $49</h3>
+        <p>Not for sale yet. Planned later: collections clause bank, Sheets twin, pay-status HTML, extra scripts, setup walkthrough outline. Core is the live product.</p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this a downloadable .notion file?</h3>
+      <p>No — you get clear Markdown property lists and views so you can recreate the system in any Notion workspace without brittle imports.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Which AI do the prompts work with?</h3>
+      <p>ChatGPT, Claude, Grok, or any solid LLM. Variables are marked; example outputs show the bar.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this legal advice or a collections agency?</h3>
+      <p>No. It’s process, templates, and copy aids. Follow local law; use a lawyer or licensed collector when the amount or jurisdiction requires it.</p>
+    </div>
+    <div class="card">
+      <h3>How is this different from Client Guard Kit?</h3>
+      <p>Client Guard Kit covers onboarding and scope defense. Collections Chase Kit covers overdue AR — Aging Board, Chase today, and the D1→final ladder inside Weekly Collections Hour.</p>
+    </div>
+
+    <h2>Free taste</h2>
+    <p class="who">Grab the free brief <em>Overdue Invoice Scripts</em> (stage map + sample lines), then upgrade to the full kit when you’re ready for the board + weekly workflow.</p>
+    <p><a href="./lead-magnet-overdue-invoice-scripts.md">Read the lead-magnet text</a> (PDF export optional).</p>
+
+    <footer>
+      <p>Collections Chase Kit · Independent digital product · Not affiliated with Notion, Inc.</p>
+      <p>Not legal advice · Not a collections agency · Questions after purchase: reply to your receipt email.</p>
+    </footer>
+  </main>
+</body>
+</html>

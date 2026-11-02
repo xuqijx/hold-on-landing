@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Guard Kit — Fixed-Price UI/Product Design Scope Defense</title>
+  <meta name="description" content="Change Request database + boundary prompts so indie UI/product designers stop unpaid “quick” revisions on fixed-fee work. Core $29." />
+  <meta property="og:title" content="Client Guard Kit — Fixed-Price UI/Product Design Scope Defense" />
+  <meta property="og:description" content="Change Requests DB + revision-boundary prompts for fixed-fee indie UI/product designers. Core $29." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .price-row {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .price {
+      font-size: 1.75rem; font-weight: 700; color: var(--text);
+    }
+    .price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pill {
+      font-size: 0.8rem; padding: 0.3rem 0.6rem; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    .pain li { margin-bottom: 0.35rem; }
+    .check { list-style: none; padding-left: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .who { color: var(--muted); }
+    .tiers { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .tiers { grid-template-columns: 1.1fr 0.9fr; } }
+    .tier-featured { border-color: #3d5f9a; box-shadow: inset 0 0 0 1px #3d5f9a; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--warn); margin-bottom: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .peer {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1.25rem 0;
+    }
+    @media (min-width: 640px) { .peer { grid-template-columns: 1fr 1fr; } }
+    .peer .card { font-size: 0.95rem; color: var(--muted); }
+    .peer .card strong { color: var(--text); font-weight: 600; }
+    .muted-note { font-size: 0.9rem; color: var(--muted); margin: 0.75rem 0 0; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Fixed-fee UI / product design</div>
+    <h1>Client Guard Kit — Fixed-Price UI/Product Design Scope Defense</h1>
+    <p class="lede">
+      Change Request database + boundary prompts so indie UI/product designers
+      stop unpaid “quick” revisions on fixed-fee work.
+    </p>
+
+    <div class="grid two" style="margin-top:0;margin-bottom:1.5rem">
+      <div class="card">
+        <h3>Change Requests DB</h3>
+        <p>Every new ask gets a row — quote, approve, or decline — before you open Figma again.</p>
+      </div>
+      <div class="card">
+        <h3>Boundary + change-order prompts</h3>
+        <p>Paste-ready replies that price the ask and keep the stay-on-scope path open.</p>
+      </div>
+    </div>
+
+    <div class="price-row">
+      <div class="price">$29 <span>Core · one-time</span></div>
+      <span class="pill">Pro $49 · Coming soon</span>
+    </div>
+
+    <!-- Replace href when Gumroad live -->
+    <!-- GUMROAD_URL -->
+    <a class="cta" id="buy" href="#buy-note">Get Client Guard Kit — $29</a>
+    <span class="cta-note" id="buy-note">Checkout link goes live after Gumroad KYC. This Pages build is ready for the URL swap.</span>
+
+    <h2>If this sounds familiar</h2>
+    <div class="card">
+      <ul class="pain">
+        <li>Fixed-fee UI/product projects where “one more screen” lands after the revision cap.</li>
+        <li>Slack polish that was never in the SOW — and never got a price.</li>
+        <li>You write long apologetic replies instead of a short change order.</li>
+        <li>Handoff never closes because new ideas keep arriving as “bugs.”</li>
+      </ul>
+    </div>
+
+    <div class="peer">
+      <div class="card"><strong>Peer note:</strong> New work stays optional when it’s visible and priced — not buried in a goodwill thread.</div>
+      <div class="card"><strong>Also true:</strong> A Change Request row is often enough; you don’t need a heavier CRM to defend a fixed fee.</div>
+    </div>
+
+    <h2>What’s inside Core</h2>
+    <ul class="check">
+      <li><strong style="color:var(--text)">Change Requests database (primary)</strong> — Notion-style Markdown + view recipes; default gate for fixed-fee design asks. Clients &amp; Projects DBs included as supporting structure.</li>
+      <li><strong style="color:var(--text)">Prompt pack (5)</strong> — revision-boundary reply, change-order email, SOW draft, kickoff questionnaire, deposit / kickoff / final payment reminder.</li>
+      <li><strong style="color:var(--text)">SOP one-pagers (3)</strong> — onboarding checklist, scope-change workflow, handoff &amp; acceptance (with paste-ready acceptance note).</li>
+    </ul>
+    <p class="muted-note">Deep multi-touch overdue chase lives in <strong style="color:var(--text)">Collections Chase Kit</strong> — this pack only covers light deposit / kickoff / final payment reminders for fixed-fee design.</p>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Built for</h3>
+        <ul>
+          <li>Fixed-price indie UI / product designers (solo or tiny studio)</li>
+          <li>Figma → handoff or product UI packages sold on a fixed fee</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not built for</h3>
+        <ul>
+          <li>Generic Notion freelance CRM seekers</li>
+          <li>Hourly-only / time-and-materials shops</li>
+          <li>Anyone wanting a lawyer-drafted contract</li>
+          <li>Agencies with full PM + legal already</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>How you use it this week</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Stand up Change Requests</h3><p>Rebuild the CR database (plus Clients/Projects). Wire relations. Turn on Needs quote + Approved queue views.</p></div>
+      <div class="card"><h3>2. Freeze scope before kickoff</h3><p>Kickoff questionnaire → SOW draft → deposit invoice. No billable Figma until deposit clears.</p></div>
+      <div class="card"><h3>3. Route every new ask</h3><p>Out of scope or cap hit → Change Request → change-order or boundary reply → work only after YES.</p></div>
+      <div class="card"><h3>4. Close with acceptance</h3><p>Defect window for real bugs; new ideas become a CR or new project — not a guilt spiral.</p></div>
+    </div>
+
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="card tier-featured">
+        <div class="tag">Available now</div>
+        <h3>Core — $29</h3>
+        <p>Change Requests DB + Clients/Projects, 5 prompts, 3 SOPs. Enough to price the next “quick” ask on a fixed-fee design project.</p>
+        <!-- GUMROAD_URL -->
+        <a class="cta" href="#buy-note" style="margin-top:0.75rem">Buy Core</a>
+      </div>
+      <div class="card">
+        <div class="tag">Coming soon</div>
+        <h3>Pro — $49</h3>
+        <p>Not available to buy yet. Planned for fixed-fee design: contract clause bank, rate card sheet, client status HTML, extra scripts, setup walkthrough outline, CN one-pager blurb.</p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this a downloadable .notion file?</h3>
+      <p>No — you get clear Markdown property lists and views so you can recreate the system in any Notion workspace without brittle imports.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Which AI do the prompts work with?</h3>
+      <p>ChatGPT, Claude, Grok, or any solid LLM. Variables are marked; example outputs show the bar. Missing required fields → ask first; never invent amounts or payment links.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this a freelance CRM?</h3>
+      <p>No. It’s scope defense for fixed-fee UI/product design — Change Requests first, not a pipeline vanity board.</p>
+    </div>
+    <div class="card">
+      <h3>Is this legal advice?</h3>
+      <p>No. It’s process, templates, and copy aids for commercial alignment. Attach your own contract/MSA when you need one.</p>
+    </div>
+
+    <h2>Free taste</h2>
+    <p class="who">Grab the free brief <em>Scope Creep Red Flags</em> (12 warning signs + a 72-hour fix), then upgrade to the full kit when you’re ready.</p>
+    <p><a href="./lead-magnet-scope-creep-red-flags.md">Read the lead-magnet text</a> (PDF export optional).</p>
+
+    <footer>
+      <p>Client Guard Kit · Independent digital product · Not affiliated with Notion, Inc.</p>
+      <p>Questions after purchase: reply to your receipt email.</p>
+    </footer>
+  </main>
+</body>
+</html>
