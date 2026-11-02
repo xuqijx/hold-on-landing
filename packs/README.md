@@ -9,4 +9,4 @@ Static sales pages served as GitHub Pages subpaths under `/packs/`. They do not 
 - [Discovery→Proposal Kit](./discovery-proposal-kit/)
 - [Fit-Score Search Kit](./job-search-os/)
 
-Buy buttons point at `#buy-note` placeholders. Do not add checkout URLs here until a real product link exists.
+Core buy buttons open the live Gumroad checkout for that pack. Pro stays marked coming soon and is not linked.
