@@ -2,6 +2,8 @@
 
 Static sales pages served as GitHub Pages subpaths under `/packs/`. They do not replace the Hold On landing at the repository root.
 
+`packs/index.html` is the public hub at `/packs/`.
+
 - [Client Guard Kit](./client-guard-kit/)
 - [Collections Chase Kit](./collections-chase-kit/)
 - [Faceless Script OS](./faceless-script-os/)
