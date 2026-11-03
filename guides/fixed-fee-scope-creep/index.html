@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixed-Fee Scope Creep Template — Stop Unpaid “Quick” Revisions</title>
+  <meta name="description" content="A practical fixed-fee scope creep checklist for indie designers: red flags, a 72-hour fix, and a Change Request path so unpaid revisions stop eating margin. Links to Client Guard Kit ($29)." />
+  <meta name="keywords" content="fixed fee scope creep, scope creep template, freelance change request, unpaid revisions, fixed-price design" />
+  <meta property="og:title" content="Fixed-Fee Scope Creep Template — Stop Unpaid “Quick” Revisions" />
+  <meta property="og:description" content="Red flags + 72-hour fix for fixed-fee UI/product designers. Then upgrade to Client Guard Kit when you want the full Change Request system." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://xuqijx.github.io/hold-on-landing/guides/fixed-fee-scope-creep/" />
+  <link rel="canonical" href="https://xuqijx.github.io/hold-on-landing/guides/fixed-fee-scope-creep/" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .nav {
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1rem;
+      font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--accent); }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 0.85rem;
+    }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    .grid { display: grid; gap: 1rem; margin: 1.25rem 0; }
+    @media (min-width: 640px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-secondary {
+      display: inline-block;
+      margin-left: 0.5rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      color: var(--text) !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .check { list-style: none; padding-left: 0; margin: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 1.5rem; height: 1.5rem; border-radius: 999px;
+      background: #1a2744; border: 1px solid var(--line);
+      font-size: 0.8rem; font-weight: 700; color: var(--accent2);
+      margin-right: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); }
+    .muted-note { font-size: 0.9rem; color: var(--muted); }
+    strong.t { color: var(--text); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="Breadcrumb">
+      <a href="../../">Hold On</a>
+      <span>/</span>
+      <a href="../../packs/client-guard-kit/">Client Guard Kit</a>
+      <span>/</span>
+      <span>Scope creep guide</span>
+    </nav>
+
+    <div class="eyebrow">Free guide · Fixed-fee freelancers</div>
+    <h1>Fixed-fee scope creep: a template to stop unpaid “quick” revisions</h1>
+    <p class="lede">
+      Scope creep rarely arrives as a villain speech. It shows up as “quick,” “small,” and “while you’re in there.”
+      If you sell UI/product design on a fixed fee, every unclear yes is a silent discount.
+      This page is a <strong class="t">scope creep checklist + 72-hour fix</strong> — then a clear path to the full Change Request kit if you want it.
+    </p>
+
+    <a class="cta" href="../../packs/client-guard-kit/">See Client Guard Kit — $29 Core</a>
+    <a class="cta-secondary" href="https://xuqi3.gumroad.com/l/client-guard-kit">Buy on Gumroad</a>
+    <span class="cta-note">No fake traction claims. Pro $49 is coming soon — not for sale yet.</span>
+
+    <h2>If this sounds familiar</h2>
+    <div class="card">
+      <ul>
+        <li>“One more screen” lands after the revision cap — and you still open Figma.</li>
+        <li>Slack polish that was never in the SOW, and never got a price.</li>
+        <li>You write long apologetic replies instead of a short change order.</li>
+        <li>Handoff never closes because new ideas keep arriving as “bugs.”</li>
+      </ul>
+    </div>
+
+    <h2>12 red flags (sales → kickoff → delivery)</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>Sales &amp; fit</h3>
+        <ul>
+          <li><strong class="t">1.</strong> No budget range, only “flexible.”</li>
+          <li><strong class="t">2.</strong> Committee with no named decider.</li>
+          <li><strong class="t">3.</strong> “We’ll know it when we see it.”</li>
+          <li><strong class="t">4.</strong> Rush + undefined scope.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Kickoff</h3>
+        <ul>
+          <li><strong class="t">5.</strong> Deposit skipped “because we’re friends.”</li>
+          <li><strong class="t">6.</strong> Assets “coming soon” with a hard launch date.</li>
+          <li><strong class="t">7.</strong> Feedback in four channels at once.</li>
+          <li><strong class="t">8.</strong> Unlimited revisions promised on the sales call.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Delivery</h3>
+      <ul>
+        <li><strong class="t">9.</strong> A “tweak” that needs new modules or pages → change order, not a revision.</li>
+        <li><strong class="t">10.</strong> New stakeholder at week 3 rewriting goals.</li>
+        <li><strong class="t">11.</strong> Revision cap hit, still “just polish.”</li>
+        <li><strong class="t">12.</strong> Final files before final payment.</li>
+      </ul>
+    </div>
+
+    <h2>72-hour fix (do this once)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><span class="num">1</span> Day 1 — Write the defaults</h3>
+        <p>Put your default revision cap and deposit % on a sticky (or a Notion page). If it isn’t written, you’ll negotiate against yourself under pressure.</p>
+      </div>
+      <div class="card">
+        <h3><span class="num">2</span> Day 2 — Stand up a Change Request list</h3>
+        <p>Even a simple table works: ask · in/out of scope · quote · status. Every new ask gets a row before you open Figma again.</p>
+      </div>
+      <div class="card">
+        <h3><span class="num">3</span> Day 3 — Save two scripts</h3>
+        <p>A change-order email and a revision-boundary reply. Short, priced, optional — not a guilt essay.</p>
+      </div>
+    </div>
+
+    <h2>What “priced and optional” looks like</h2>
+    <div class="card">
+      <p>New work stays optional when it’s <strong class="t">visible and priced</strong> — not buried in a goodwill Slack thread. A Change Request row is often enough; you don’t need a heavier CRM to defend a fixed fee.</p>
+      <p class="muted-note" style="margin-top:0.75rem;margin-bottom:0">This is process, not legal advice. Attach your own contract/MSA when you need one.</p>
+    </div>
+
+    <h2>Want the full system?</h2>
+    <p class="muted-note">Client Guard Kit (Core $29, one-time) gives you the Change Requests database (Notion-style Markdown), five paste-ready prompts, and three SOP one-pagers for fixed-fee UI/product design.</p>
+    <ul class="check" style="margin:1rem 0 1.25rem">
+      <li>Change Requests DB + supporting Clients/Projects structure</li>
+      <li>Boundary reply, change-order email, SOW draft, kickoff questionnaire, light payment reminders</li>
+      <li>Onboarding, scope-change, and handoff/acceptance SOPs</li>
+    </ul>
+    <a class="cta" href="../../packs/client-guard-kit/">Open the product page</a>
+    <a class="cta-secondary" href="https://xuqi3.gumroad.com/l/client-guard-kit">Checkout $29</a>
+
+    <h2>Related</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>Collections Chase Kit</h3>
+        <p>Aging board + chase copy when invoices go overdue (separate from light deposit reminders in Client Guard).</p>
+        <p><a href="../../packs/collections-chase-kit/">Product page</a></p>
+      </div>
+      <div class="card">
+        <h3>Hold On</h3>
+        <p>Cool down before impulse buys — a different product, same idea: insert a pause before the costly yes.</p>
+        <p><a href="../../">Landing</a></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Independent guide · Not affiliated with Notion, Inc. · No income guarantees.</p>
+      <p>
+        <a href="../../packs/client-guard-kit/">Client Guard Kit</a> ·
+        <a href="../../packs/collections-chase-kit/">Collections Chase</a> ·
+        <a href="../../">Hold On</a> ·
+        <a href="https://xuqi3.gumroad.com">Gumroad store</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
