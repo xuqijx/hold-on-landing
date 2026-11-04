@@ -2,7 +2,7 @@
 
 **Format for export:** Paste into Google Docs / Typst / Canva → export PDF (3–5 pages light).  
 **Purpose:** Free download → X list → pitch Peak-Day Seller Kit Core $29.  
-**CTA at end:** Link placeholder `https://xuqijx.github.io/hold-on-landing/packs/peak-day-seller-kit/` / Gumroad `{{GUMROAD_URL}}`.  
+**CTA at end:** Link placeholder `https://xuqijx.github.io/hold-on-landing/packs/peak-day-seller-kit/` / Gumroad `https://xuqi3.gumroad.com/l/peak-day-seller-kit`.  
 **Promo:** X only.
 
 ---
@@ -71,4 +71,4 @@ No revenue guarantees. No fake scarcity.
 
 Notion Offer freeze + Checklist + Support tickets + Day-after sweep, 6 prompts, 3 SOPs — Core **$29**.
 
-→ `https://xuqijx.github.io/hold-on-landing/packs/peak-day-seller-kit/` · or Gumroad `{{GUMROAD_URL}}`
+→ `https://xuqijx.github.io/hold-on-landing/packs/peak-day-seller-kit/` · or Gumroad `https://xuqi3.gumroad.com/l/peak-day-seller-kit`
