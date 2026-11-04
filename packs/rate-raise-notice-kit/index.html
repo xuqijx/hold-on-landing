@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://xuqijx.github.io/hold-on-landing/packs/rate-raise-notice-kit/" />
+  <title>Rate Raise Notice Kit — Tell Existing Clients Your 2027 Rate</title>
+  <meta name="description" content="Score keep / raise / fire → one notice email in your voice → objection replies. For indie consultants with retainers / ≥3 active clients. Core $29. No income promises." />
+  <meta property="og:title" content="Rate Raise Notice Kit — Tell Existing Clients Your 2027 Rate" />
+  <meta property="og:description" content="Keep/Raise/Fire scorecard → one soft or direct 2027 notice. After they agree → bill at new rate. Overdue old invoices → Collections Chase Kit. Core $29." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .price-row {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .price {
+      font-size: 1.75rem; font-weight: 700; color: var(--text);
+    }
+    .price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pill {
+      font-size: 0.8rem; padding: 0.3rem 0.6rem; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+      .grid.three { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    .pain li { margin-bottom: 0.35rem; }
+    .check { list-style: none; padding-left: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .who { color: var(--muted); }
+    .tiers { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .tiers { grid-template-columns: 1.1fr 0.9fr; } }
+    .tier-featured { border-color: #3d5f9a; box-shadow: inset 0 0 0 1px #3d5f9a; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--warn); margin-bottom: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .peer {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1.25rem 0;
+    }
+    @media (min-width: 640px) { .peer { grid-template-columns: 1fr 1fr; } }
+    .peer .card { font-size: 0.95rem; color: var(--muted); }
+    .peer .card strong { color: var(--text); font-weight: 600; }
+    .muted-note { font-size: 0.9rem; color: var(--muted); margin: 0.75rem 0 0; }
+    .hardstop {
+      border-color: #3d5f9a;
+      background: linear-gradient(180deg, #152038 0%, var(--card) 100%);
+    }
+    .hardstop h3 { color: var(--accent2); }
+    .honest {
+      border-color: #4a3d1a;
+      background: linear-gradient(180deg, #241c10 0%, var(--card) 100%);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Indie consultants with retainers · ≥3 active clients</div>
+    <h1>Rate Raise Notice Kit — Tell Existing Clients Your 2027 Rate</h1>
+    <p class="lede">
+      Score keep / raise / fire → one notice email in your voice → objection replies. No income promises.
+    </p>
+
+    <div class="grid three" style="margin-top:0;margin-bottom:1.5rem">
+      <div class="card">
+        <h3>Score first</h3>
+        <p>Keep / Raise / Fire with defaults (≥12 months since last raise or clearly below market → Raise).</p>
+      </div>
+      <div class="card">
+        <h3>One notice</h3>
+        <p>Soft or direct email — sendable in your voice. Rate-math stays optional appendix.</p>
+      </div>
+      <div class="card">
+        <h3>Ready replies</h3>
+        <p>Budget, loyalty, stall, or “I’ll leave” — plus confirm-or-pause closers.</p>
+      </div>
+    </div>
+
+    <div class="card hardstop" style="margin-bottom:1rem">
+      <h3>Hard stop</h3>
+      <p><strong style="color:var(--text)">After they agree the new rate → bill at new rate. Overdue old invoices → Collections Chase Kit.</strong></p>
+      <p style="margin:0.5rem 0 0">Ends when the client <strong style="color:var(--text)">acknowledges</strong> the new rate (accept / negotiate scope / pause). Mid-project CR → <strong style="color:var(--text)">Client Guard Kit</strong>. New leads → <strong style="color:var(--text)">Discovery→Proposal Kit</strong>.</p>
+    </div>
+
+    <div class="card honest" style="margin-bottom:1.5rem">
+      <h3>Built for one primary persona</h3>
+      <p><strong style="color:var(--text)">Indie consultants with retainers</strong> — and independents with <strong style="color:var(--text)">≥3 active clients</strong> — who need a Jan-effective 2027 notice in Nov–Dec. Other crafts can borrow the tools; this page does not treat designers / writers / developers / coaches as equal parallel hero audiences.</p>
+    </div>
+
+    <div class="price-row">
+      <div class="price">$29 <span>Core · one-time</span></div>
+      <span class="pill">Pro $49 · Coming soon</span>
+    </div>
+
+    <!-- Replace href when Gumroad live -->
+    <a class="cta" id="buy" href="https://xuqi3.gumroad.com/l/rate-raise-notice-kit">Get Rate Raise Notice Kit — $29</a>
+    <span class="cta-note" id="buy-note">Checkout: <a href="https://xuqi3.gumroad.com/l/rate-raise-notice-kit">https://xuqi3.gumroad.com/l/rate-raise-notice-kit</a> · Promo: X only.</span>
+
+    <h2>If this sounds familiar</h2>
+    <div class="card">
+      <ul class="pain">
+        <li>You know the rate is stale — the blank email is the freeze.</li>
+        <li>You have a retainer or ≥3 active clients who still pay 2026 numbers.</li>
+        <li>You want one clear notice, not a lecture about “undercharging yourself.”</li>
+        <li>You’re not looking for a Collections ladder or a new-lead machine today.</li>
+      </ul>
+    </div>
+
+    <div class="peer">
+      <div class="card"><strong>Peer note:</strong> First-run is scorecard → one sendable notice — not a spreadsheet gauntlet.</div>
+      <div class="card"><strong>Also true:</strong> Soft worksheet math is for you — not “earn $X” or “won’t lose clients.”</div>
+    </div>
+
+    <h2>What’s inside Core</h2>
+    <ul class="check">
+      <li><strong style="color:var(--text)">Notion-style Markdown</strong> — Clients · Rate plan (old→new, effective date) · Notices sent + views <strong style="color:var(--text)">Keep / Raise / Fire / Paused</strong>.</li>
+      <li><strong style="color:var(--text)">Prompt pack (6)</strong> — <strong style="color:var(--text)">keep/raise/fire scorecard (HERO)</strong>; <strong style="color:var(--text)">soft notice (HERO)</strong>; direct notice; objection bank; confirm-or-pause; rate-math (<strong style="color:var(--text)">optional appendix</strong>).</li>
+      <li><strong style="color:var(--text)">SOP one-pagers (3)</strong> — who-first order; 30-day notice rule; if-they-leave capacity refill (1 page only).</li>
+    </ul>
+    <p class="muted-note">No income or retention guarantees. No fake scarcity. Templates and SOPs are not legal or pricing advice.</p>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Built for</h3>
+        <ul>
+          <li>Indie consultants with retainers</li>
+          <li>Independents with <strong style="color:var(--text)">≥3 active / recent clients</strong></li>
+          <li>Nov–Dec → Jan-effective 2027 rate window</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not built for</h3>
+        <ul>
+          <li>Overdue old invoices → Collections Chase Kit</li>
+          <li>Mid-project CR / revisions → Client Guard Kit</li>
+          <li>New-lead Discovery pipelines / “won’t lose clients” claims</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>How you use it</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Score</h3><p>Run Keep/Raise/Fire (defaults baked in). Empty board on day one is normal — add your roster first.</p></div>
+      <div class="card"><h3>2. One notice</h3><p>Soft or direct email for your first Raise pick. Skip rate-math if you already know the number.</p></div>
+      <div class="card"><h3>3. Hard stop</h3><p>Accept / scope / pause = done here. Then bill at the new rate. Old overdue → Collections.</p></div>
+    </div>
+
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="card tier-featured">
+        <div class="tag">Available now</div>
+        <h3>Core — $29</h3>
+        <p>Clients / Rate plan / Notices sent, 6 prompts, 3 SOPs. Enough to go from scorecard to a sendable 2027 notice in about 20 minutes — without lecturing yourself first.</p>
+        <a class="cta" href="https://xuqi3.gumroad.com/l/rate-raise-notice-kit" style="margin-top:0.75rem">Buy Core</a>
+      </div>
+      <div class="card">
+        <div class="tag">Coming soon</div>
+        <h3>Pro — $49</h3>
+        <p>Not available to buy yet. Planned: niche banks (designer / writer / developer), retainer bump pack, Loom outline, CN blurb, rate-card one-pager HTML.</p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Will this guarantee I won’t lose clients or earn $X more?</h3>
+      <p><strong style="color:var(--text)">No.</strong> No income or retention promises. Soft worksheet math only.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Do I have to finish rate-math before I send?</h3>
+      <p><strong style="color:var(--text)">No.</strong> First-run is scorecard → one notice. Rate-math is an optional appendix.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this for every craft equally?</h3>
+      <p><strong style="color:var(--text)">Primary persona is indie consultants with retainers / independents with ≥3 active clients.</strong> Others can use the same tools; they’re not equal hero audiences here.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this legal or pricing advice?</h3>
+      <p><strong style="color:var(--text)">No.</strong> Templates and SOPs are commercial process aids — not legal, pricing, tax, or HR advice.</p>
+    </div>
+    <div class="card">
+      <h3>Is this a downloadable .notion file?</h3>
+      <p>No — clear Markdown property lists and views so you can recreate the system in any Notion workspace without brittle imports.</p>
+    </div>
+
+    <h2>Free taste</h2>
+    <p class="who">Grab the free <em>30-Day Rate Notice Checklist</em>, then upgrade to the full kit when you’re ready.</p>
+    <p><a href="./lead-magnet-30-day-rate-notice-checklist.md">Read the lead-magnet text</a> (PDF export optional).</p>
+
+    <footer>
+      <p>Rate Raise Notice Kit · Independent digital product · Not affiliated with Notion, Inc. or Gumroad.</p>
+      <p>Questions after purchase: reply to your receipt email. Promo channel: X only.</p>
+    </footer>
+  </main>
+</body>
+</html>

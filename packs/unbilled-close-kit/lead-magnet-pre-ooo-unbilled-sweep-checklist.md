@@ -2,7 +2,7 @@
 
 **Format for export:** Paste into Google Docs / Typst / Canva → export PDF (3–5 pages light).  
 **Purpose:** Free download → X list → pitch Unbilled Close Kit Core $29.  
-**CTA at end:** Link placeholder `https://xuqijx.github.io/hold-on-landing/packs/unbilled-close-kit/` / Gumroad `{{GUMROAD_URL}}`.  
+**CTA at end:** Link placeholder `https://xuqijx.github.io/hold-on-landing/packs/unbilled-close-kit/` / Gumroad `https://xuqi3.gumroad.com/l/unbilled-close-kit`.  
 **Promo:** X only.
 
 ---
@@ -69,4 +69,4 @@ No invented hours. No collection guarantees. Not financial / tax advice.
 
 Notion Unbilled items · Clients · Final invoices (Draft / Sent / Handed-to-Collections stub), 6 prompts, 3 SOPs — Core **$29**.
 
-→ `https://xuqijx.github.io/hold-on-landing/packs/unbilled-close-kit/` · or Gumroad `{{GUMROAD_URL}}`
+→ `https://xuqijx.github.io/hold-on-landing/packs/unbilled-close-kit/` · or Gumroad `https://xuqi3.gumroad.com/l/unbilled-close-kit`
