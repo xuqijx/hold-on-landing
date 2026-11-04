@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://xuqijx.github.io/hold-on-landing/packs/unbilled-close-kit/" />
+  <title>Unbilled Close Kit — Find Forgotten Hours → Final Invoice Before OOO</title>
+  <meta name="description" content="Calendar/Slack clues → unbilled list → same-day final invoice for hourly/hybrid freelancers. Then hand overdue to Collections. Core $29. No invented hours. Not a chase ladder." />
+  <meta property="og:title" content="Unbilled Close Kit — Find Forgotten Hours → Final Invoice Before OOO" />
+  <meta property="og:description" content="Hourly/hybrid close-out before OOO: clues → unbilled list → one final invoice. This finds and bills forgotten work. Chasing unpaid sent invoices → Collections Chase Kit. Core $29." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --warn: #ffb020;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .price-row {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .price {
+      font-size: 1.75rem; font-weight: 700; color: var(--text);
+    }
+    .price span { font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+    .pill {
+      font-size: 0.8rem; padding: 0.3rem 0.6rem; border-radius: 999px;
+      border: 1px solid var(--line); color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 8px 30px rgba(110, 168, 255, 0.25);
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+      .grid.three { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    .pain li { margin-bottom: 0.35rem; }
+    .check { list-style: none; padding-left: 0; }
+    .check li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+    }
+    .check li::before {
+      content: "✓";
+      position: absolute; left: 0; color: var(--ok); font-weight: 700;
+    }
+    .who { color: var(--muted); }
+    .tiers { display: grid; gap: 1rem; }
+    @media (min-width: 640px) { .tiers { grid-template-columns: 1.1fr 0.9fr; } }
+    .tier-featured { border-color: #3d5f9a; box-shadow: inset 0 0 0 1px #3d5f9a; }
+    .tag {
+      display: inline-block; font-size: 0.72rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--warn); margin-bottom: 0.4rem;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .peer {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1.25rem 0;
+    }
+    @media (min-width: 640px) { .peer { grid-template-columns: 1fr 1fr; } }
+    .peer .card { font-size: 0.95rem; color: var(--muted); }
+    .peer .card strong { color: var(--text); font-weight: 600; }
+    .muted-note { font-size: 0.9rem; color: var(--muted); margin: 0.75rem 0 0; }
+    .hardstop {
+      border-color: #3d5f9a;
+      background: linear-gradient(180deg, #152038 0%, var(--card) 100%);
+    }
+    .hardstop h3 { color: var(--accent2); }
+    .honest {
+      border-color: #4a3d1a;
+      background: linear-gradient(180deg, #241c10 0%, var(--card) 100%);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Hourly / hybrid freelancers &amp; indie consultants</div>
+    <h1>Unbilled Close Kit — Find Forgotten Hours → Final Invoice Before OOO</h1>
+    <p class="lede">
+      Calendar/Slack clues → unbilled list → same-day final invoice. Then hand overdue to Collections.
+    </p>
+
+    <div class="grid three" style="margin-top:0;margin-bottom:1.5rem">
+      <div class="card">
+        <h3>Pull clues</h3>
+        <p>Redact, then extract forgotten calls and “quick” threads into an unbilled list.</p>
+      </div>
+      <div class="card">
+        <h3>Honest hours</h3>
+        <p>Only times that appear in your paste. Missing → <code>unknown</code> you confirm — never AI-filled.</p>
+      </div>
+      <div class="card">
+        <h3>One final invoice</h3>
+        <p>Line items + optional pre-OOO cover in a single sendable email the same day.</p>
+      </div>
+    </div>
+
+    <div class="card hardstop" style="margin-bottom:1rem">
+      <h3>Hard stop</h3>
+      <p><strong style="color:var(--text)">This finds and bills forgotten work. Chasing unpaid sent invoices → Collections Chase Kit.</strong></p>
+      <p style="margin:0.5rem 0 0">Mid-project scope fights → <strong style="color:var(--text)">Client Guard Kit</strong>. Ends at final invoice <strong style="color:var(--text)">sent</strong>.</p>
+    </div>
+
+    <div class="card honest" style="margin-bottom:1.5rem">
+      <h3>Built for hourly / hybrid</h3>
+      <p>If you sell <strong style="color:var(--text)">fixed-fee packages</strong> and mainly need change-request / revision boundaries, grab <strong style="color:var(--text)">Client Guard Kit</strong> instead — this close kit is for people who bill hours (or hybrid) and still have calendar/Slack work sitting unbilled before OOO.</p>
+    </div>
+
+    <div class="price-row">
+      <div class="price">$29 <span>Core · one-time</span></div>
+      <span class="pill">Pro $49 · Coming soon</span>
+    </div>
+
+    <!-- Replace href when Gumroad live -->
+    <a class="cta" id="buy" href="#buy-note">Get Unbilled Close Kit — $29</a>
+    <span class="cta-note" id="buy-note">Checkout link goes live after Gumroad KYC. This Pages build is ready for the URL swap. Promo: X only.</span>
+
+    <h2>If this sounds familiar</h2>
+    <div class="card">
+      <ul class="pain">
+        <li>December hits and half the “quick calls” never became invoices.</li>
+        <li>You’re about to go OOO with work still trapped in calendar blocks and Slack threads.</li>
+        <li>You bill hourly or hybrid — not looking for a fixed-fee scope CRM.</li>
+        <li>You want a same-day final invoice, not a multi-week chase ladder (yet).</li>
+      </ul>
+    </div>
+
+    <div class="peer">
+      <div class="card"><strong>Peer note:</strong> Unbilled ≠ overdue. First send the invoice; chase only if it’s ignored.</div>
+      <div class="card"><strong>Also true:</strong> Soft worksheet math is for you — not a “recover $X guaranteed” claim.</div>
+    </div>
+
+    <h2>What’s inside Core</h2>
+    <ul class="check">
+      <li><strong style="color:var(--text)">Notion-style Markdown</strong> — Unbilled items · Clients · Final invoices + views <strong style="color:var(--text)">Draft / Sent / Handed-to-Collections</strong> (Collections = stub only).</li>
+      <li><strong style="color:var(--text)">Prompt pack (6)</strong> — clue extract; reconstruct hours (<code>unknown</code> if missing); <strong style="color:var(--text)">line-item invoice email (HERO)</strong>; OOO cover; dispute-only confirm reply; Collections handoff stub.</li>
+      <li><strong style="color:var(--text)">SOP one-pagers (3)</strong> — 48h pre-OOO sweep; same-day send rule; what NOT to bill.</li>
+    </ul>
+    <p class="muted-note">No invented hours. No D1/D7/D14 chase inside this pack. No collection guarantees. Invoice drafts are not financial, legal, or tax advice.</p>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Built for</h3>
+        <ul>
+          <li>Solo freelancers &amp; indie consultants</li>
+          <li><strong style="color:var(--text)">Hourly or hybrid</strong> billing</li>
+          <li>Holiday / year-end OOO with work still in calendars &amp; DMs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Not built for</h3>
+        <ul>
+          <li>Fixed-fee scope defense only → Client Guard Kit</li>
+          <li>Overdue chase after a sent invoice → Collections Chase Kit</li>
+          <li>Time-tracker SaaS / QuickBooks replacement / tax filing</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>How you use it</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Sweep</h3><p>Redact clues → extract unbilled list → mark goodwill vs billable. Missing durations stay <code>unknown</code>.</p></div>
+      <div class="card"><h3>2. One invoice</h3><p>HERO line-item email (+ fold pre-OOO cover). Send the same day. Confirm-hours only if they dispute.</p></div>
+      <div class="card"><h3>3. Hard stop</h3><p>Status Sent = done here. Ignored/overdue → Handed-to-Collections stub → Collections Chase Kit.</p></div>
+    </div>
+
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="card tier-featured">
+        <div class="tag">Available now</div>
+        <h3>Core — $29</h3>
+        <p>Unbilled items / Clients / Final invoices, 6 prompts, 3 SOPs. Enough to go from clues to a sendable final invoice the same day — without inventing hours.</p>
+        <a class="cta" href="#buy-note" style="margin-top:0.75rem">Buy Core</a>
+      </div>
+      <div class="card">
+        <div class="tag">Coming soon</div>
+        <h3>Pro — $49</h3>
+        <p>Not available to buy yet. Planned: niche extract banks (design / eng / writing), PDF invoice one-pager, Loom walkthrough, CN blurb, Dec 15/20/23 countdown SOP.</p>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this for fixed-fee designers?</h3>
+      <p><strong style="color:var(--text)">Main audience is hourly / hybrid.</strong> Fixed-fee scope &amp; revision boundaries → Client Guard Kit. Don’t buy this expecting a Change Request system.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Will this guarantee I recover $X?</h3>
+      <p><strong style="color:var(--text)">No.</strong> Soft worksheet math only. No collection guarantees. Chasing unpaid sent invoices → Collections Chase Kit.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Do I have to confirm hours with the client every time?</h3>
+      <p><strong style="color:var(--text)">No.</strong> Default path is one final invoice email. Confirm-hours reply is dispute-only.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Can the AI fill in missing hours?</h3>
+      <p><strong style="color:var(--text)">No.</strong> Prompts hard-stop inventing hours. Missing durations → <code>unknown</code> for you to confirm.</p>
+    </div>
+    <div class="card" style="margin-bottom:0.75rem">
+      <h3>Is this financial or tax advice?</h3>
+      <p><strong style="color:var(--text)">No.</strong> Invoice drafts and SOPs are commercial process aids — not financial, legal, tax, or debt-collection advice.</p>
+    </div>
+    <div class="card">
+      <h3>Is this a downloadable .notion file?</h3>
+      <p>No — clear Markdown property lists and views so you can recreate the system in any Notion workspace without brittle imports.</p>
+    </div>
+
+    <h2>Free taste</h2>
+    <p class="who">Grab the free <em>Pre-OOO Unbilled Sweep Checklist</em>, then upgrade to the full kit when you’re ready.</p>
+    <p><a href="./lead-magnet-pre-ooo-unbilled-sweep-checklist.md">Read the lead-magnet text</a> (PDF export optional).</p>
+
+    <footer>
+      <p>Unbilled Close Kit · Independent digital product · Not affiliated with Notion, Inc. or Gumroad.</p>
+      <p>Questions after purchase: reply to your receipt email. Promo channel: X only.</p>
+    </footer>
+  </main>
+</body>
+</html>
