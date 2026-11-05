@@ -1,48 +1,38 @@
-# Hold On landing page
+[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md)
 
-Static English page: pain → 3 steps → **$9.99** → email intent.
+# Hold On — landing site
 
-Open locally: double-click `index.html`, or:
+Static landing site for **Hold On** (Chinese name: 先别买), an iOS app concept that adds a cool-down before impulse purchases. The app is **not released yet** and is not on the App Store; the landing page collects early-access emails.
+
+Live site: https://xuqijx.github.io/hold-on-landing/
+
+## What Hold On is meant to do
+
+1. **Share a product** from a shopping app into Hold On.
+2. **Cool down by price** — the wait timer scales with the item's cost.
+3. **Decide later** — when the timer ends, buy it or let it go, and see what you didn't spend.
+
+Planned pricing shown on the page: $9.99 one-time unlock, no subscription, no ads.
+
+## Repository layout
+
+- `index.html` — Hold On landing page with an email "notify me" form (Formspree endpoint).
+- `packs/` — separate static sales pages for digital packs (templates/kits for freelancers); hub at `/packs/`. Buy buttons link to Gumroad. See `packs/README.md`.
+- `guides/` — long-form guides (e.g. impulse-buying cool-down, fixed-fee scope creep) at `/guides/`. See `guides/README.md`.
+- `favicon.ico`, `favicon-32.png` — site icons.
+- `robots.txt`, `sitemap.xml`.
+
+## Run locally
+
+No build step.
 
 ```bash
-cd landing && python3 -m http.server 8765
-# then http://127.0.0.1:8765/
+python3 -m http.server 8765
+# open http://127.0.0.1:8765/
 ```
 
-Free host later: GitHub Pages / Cloudflare Pages / Netlify — drop this folder; no build step.
+Note: favicon paths use the GitHub Pages project prefix `/hold-on-landing/`, so icons may not show when served from the root locally.
 
-## Wire the form (free)
+## Email form
 
-The live endpoint is `https://formspree.io/f/xqppdwdw`. Submissions POST to Formspree.
-
-### Option A — Formspree (free tier)
-
-1. Sign up at https://formspree.io (free).
-2. Create a form → copy the endpoint, e.g. `https://formspree.io/f/xxxxxxxx`.
-3. In `index.html`, change:
-
-```html
-<form action="https://formspree.io/f/xxxxxxxx" method="POST" id="intent-form">
-```
-
-4. Optionally remove or keep the small `<script>` — with a real `action`, the browser POSTs normally (script only intercepts `action="#"`).
-
-### Option B — Tally (free)
-
-1. Create a form at https://tally.so.
-2. Either embed Tally, or use their form URL as CTA instead of the inline form.
-3. For email-only: keep one Email block; set thank-you to “You're on the list”.
-
-### Option C — mailto (zero account)
-
-```html
-<form action="mailto:YOU@example.com" method="POST" enctype="text/plain" id="intent-form">
-```
-
-Opens the visitor’s mail app — fine for tiny tests; not reliable for counting ≥10 intents.
-
-## Counting intents (money gate)
-
-Export emails weekly. Success bar for paying Apple **$99**: **≥10 unique intents in 7 days** — see `/workspace/hold-on-oss/MONEY_FUNNEL.md`.
-
-Do **not** commit the email list into any public repo.
+The form in `index.html` POSTs to Formspree (`https://formspree.io/f/xqppdwdw`). To use your own, replace the form `action`. Do not commit collected email lists to this repo.
