@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hold On — Cool down before you buy</title>
-  <meta name="description" content="Share a product, cool down by price, decide later. One-time $9.99. No ads, no subscription." />
+  <meta name="description" content="Hold On is in development and not available yet. Planned: share a product, cool down by price, decide later. Planned price $9.99 one-time. Free launch notification only — no payment." />
   <meta name="theme-color" content="#0b0d10" />
   <style>
     :root {
@@ -192,6 +192,24 @@
       font-size: 0.78rem;
       color: var(--muted);
     }
+    .route {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      margin: 0 0 1.1rem;
+      color: var(--text);
+      font-weight: 650;
+    }
+    .route:hover { border-color: var(--accent); }
+    .section-note {
+      margin: -0.35rem 0 0.9rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
     footer {
       margin-top: 1.75rem;
       padding-top: 1rem;
@@ -208,47 +226,50 @@
   <div class="wrap">
     <header>
       <div class="logo">Hold On <span>· cool down</span></div>
-      <div class="badge">Coming soon</div>
+      <div class="badge">In development</div>
     </header>
 
     <h1>That Buy button hits different when you wait.</h1>
     <p class="pain">
-      You already know you’ll regret the tap — Hold On catches the urge at share time, not after the charge.
+      Hold On is in development and not available to use. The plan is to catch the urge at share time, before the charge.
     </p>
+    <a class="route" href="#notify">Join the free launch-notification list</a>
 
     <section class="card" aria-labelledby="how">
-      <h2 id="how">How it works</h2>
+      <h2 id="how">Planned flow</h2>
+      <p class="section-note">These steps are the product plan. None of them work in an app today.</p>
       <ol class="steps">
         <li>
           <strong>Share a product</strong>
-          <p>From any shopping app, share the item into Hold On.</p>
+          <p>Planned: from any shopping app, share the item into Hold On.</p>
         </li>
         <li>
           <strong>Cool down by price</strong>
-          <p>A wait timer scales with what it costs — bigger tickets wait longer.</p>
+          <p>Planned: a wait timer scales with what it costs — bigger tickets wait longer.</p>
         </li>
         <li>
           <strong>Decide later</strong>
-          <p>When time’s up: buy, or let it go — and see what you didn’t spend.</p>
+          <p>Planned: when time’s up, buy or let it go — and see what you didn’t spend.</p>
         </li>
       </ol>
     </section>
 
     <section class="card" aria-labelledby="price">
-      <h2 id="price">Price</h2>
+      <h2 id="price">Planned price</h2>
       <div class="price-row">
-        <div class="price">$9.99 <small>one-time unlock</small></div>
+        <div class="price">$9.99 <small>planned · one-time</small></div>
       </div>
-      <p class="price-note">Pay once. Keep it. No account required to try the wait.</p>
+      <p class="price-note">Planned price: $9.99 one-time. Hold On is not available yet. Joining the launch-notification list is free; no payment is required.</p>
       <div class="tags">
-        <span class="tag">No ads</span>
-        <span class="tag">No subscription</span>
-        <span class="tag">iOS · App Store</span>
+        <span class="tag">No ads · planned</span>
+        <span class="tag">No subscription · planned</span>
+        <span class="tag">iOS App Store · planned</span>
       </div>
     </section>
 
     <section class="card" aria-labelledby="notify">
-      <h2 id="notify">Early access</h2>
+      <h2 id="notify">Launch notification</h2>
+      <p class="section-note">Free signup for a launch email only. This is not free access and not a finished app. No launch date is promised.</p>
       <!-- Wired to Formspree — see README.md beside this file -->
       <form action="https://formspree.io/f/xqppdwdw" method="POST" id="intent-form">
         <label for="email">Email</label>
@@ -268,7 +289,7 @@
     </section>
 
     <footer>
-      Hold On · share → cool-down → decide · $9.99 unlock
+      Hold On · in development · not available yet · planned $9.99
     </footer>
   </div>
 
