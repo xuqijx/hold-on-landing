@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scope Creep on Fixed-Fee UI Work: Stop Unpaid Revisions</title>
+  <meta name="description" content="A free change-request and change-order checklist for fixed-price UI and product designers. Log the ask, mark in or out of scope, and copy a short change-order note. No signup." />
+  <meta name="keywords" content="freelance scope creep, fixed-price design revisions, change request log, unpaid quick revisions" />
+  <meta property="og:title" content="Scope Creep on Fixed-Fee UI Work: Stop Unpaid Revisions" />
+  <meta property="og:description" content="Free on-page change-request checklist and a copyable change-order note for fixed-fee UI work. No account required." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://xuqijx.github.io/hold-on-landing/guides/scope-creep-fixed-price-designers/" />
+  <link rel="canonical" href="https://xuqijx.github.io/hold-on-landing/guides/scope-creep-fixed-price-designers/" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #6ea8ff;
+      --accent2: #3dd6c6;
+      --line: #243049;
+      --ok: #3ecf8e;
+      --radius: 14px;
+      --max: 720px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2744 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .wrap { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+    .nav {
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1rem;
+      font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .nav a { color: var(--muted); text-decoration: none; }
+    .nav a:hover { color: var(--accent); }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      border: 1px solid #2a4a46;
+      background: #10241f;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+    h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 0.85rem;
+    }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #8b7bff);
+      color: #081018 !important;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta-note { display: block; margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); }
+    .checks { list-style: none; padding: 0; margin: 0.4rem 0 0; }
+    .checks li { margin: 0.45rem 0; }
+    .checks label { display: flex; gap: 0.6rem; align-items: flex-start; color: var(--text); }
+    .checks input { margin-top: 0.35rem; }
+    pre {
+      margin: 0.75rem 0 0;
+      padding: 0.9rem 1rem;
+      background: #0c1424;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      color: var(--text);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    footer {
+      margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer a { color: var(--muted); }
+    strong.t { color: var(--text); font-weight: 600; }
+  </style>
+  <link rel="icon" href="/hold-on-landing/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/hold-on-landing/favicon-32.png">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="Breadcrumb">
+      <a href="../../packs/">Digital packs</a>
+      <span>/</span>
+      <a href="../../packs/client-guard-kit/">Client Guard Kit</a>
+      <span>/</span>
+      <span>Change-request checklist</span>
+    </nav>
+
+    <div class="eyebrow">Fixed-fee scope defense</div>
+    <h1>Scope creep on fixed-fee UI work — stop unpaid “quick” revisions</h1>
+    <p class="lede">
+      On fixed-price UI and product design work, margin dies in the inbox: “Can you just tweak this?” “One more screen.” “The stakeholder changed their mind.” None of those asks are free if they sit outside the signed scope — but without a written capture habit, they feel free. Scope creep is unpaid work that never got a change request.
+    </p>
+
+    <a class="cta" href="#checklist">Use the free change-request checklist</a>
+    <span class="cta-note">The checklist and the change-order note below are free on this page. No signup and no payment. Checking a box only marks it in your browser; nothing is sent.</span>
+
+    <h2 id="checklist">Free change-request checklist</h2>
+    <div class="card">
+      <p>Use this before you open the file again. One row per ask. If you do not know an answer, write “unknown” — do not invent a fee.</p>
+      <ul class="checks">
+        <li><label><input type="checkbox"> Who asked, and the date they asked</label></li>
+        <li><label><input type="checkbox"> The ask in one plain sentence</label></li>
+        <li><label><input type="checkbox"> In scope or out of scope against the signed deliverables and review rounds</label></li>
+        <li><label><input type="checkbox"> Impact: a rough hour range, or “TBD after a 15-minute look”</label></li>
+        <li><label><input type="checkbox"> Decision written down: absorb, change order, or decline / later phase</label></li>
+        <li><label><input type="checkbox"> If it is a change order: fee, timeline, and what is not included</label></li>
+        <li><label><input type="checkbox"> Sent in writing, and you are waiting for an explicit yes before drawing</label></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Copyable change-order note</h3>
+      <p>Paste this into email. Fill the brackets. It records an offer. It is not a contract and it is not legal advice.</p>
+      <pre>Subject: Change request — [one-line ask]
+
+Hi [name],
+
+You asked for [one sentence] on [date].
+Against the current scope, this is out of scope.
+
+Option A — change order
+Fee: [amount]
+Adds: [deliverable]
+Timing: [date or number of days after you confirm]
+Does not include: [boundary]
+
+Option B — later phase
+I can leave it out of this round and quote it separately.
+
+I will start only after you reply with a yes and the fee is agreed.
+If you would rather drop it, that is fine too.
+
+Thanks,
+[your name]</pre>
+    </div>
+
+    <h2>What counts as scope creep</h2>
+    <div class="card">
+      <p>Anything that expands effort <strong class="t">after</strong> the fee and deliverables were agreed — and is treated as “included” without a new price or timeline.</p>
+      <p>Common patterns on fixed-fee Figma→handoff or product UI packages:</p>
+      <ul>
+        <li>Extra screens, states, or breakpoints not listed in the SOW</li>
+        <li>New stakeholder rounds after the agreed review window</li>
+        <li>Brand pivots mid-build (“use the new logo set”) without a change order</li>
+        <li>“Quick” copy, icon, or layout passes that stack into hours</li>
+        <li>Re-opening closed acceptance with a fresh wish list</li>
+      </ul>
+      <p>Hourly shops bill the clock. Fixed-fee shops must <strong class="t">name</strong> the ask, or they donate the hours.</p>
+    </div>
+
+    <h2>Capture every change request</h2>
+    <div class="card">
+      <p>Do not argue in Slack threads alone. Every new ask gets a <strong class="t">Change Request</strong> row before you design:</p>
+      <ol>
+        <li><strong class="t">Who asked</strong> and when</li>
+        <li><strong class="t">What they want</strong> in one plain sentence</li>
+        <li><strong class="t">In scope / out of scope</strong> vs the signed SOW</li>
+        <li><strong class="t">Impact</strong> — hours estimate or “TBD after 15-min review”</li>
+        <li><strong class="t">Decision</strong> — absorb (rare, written), change order, or decline</li>
+      </ol>
+      <p>A Change Request log is not a CRM. It is a ledger so “quick” never means invisible. If it is not in the log, it did not happen for billing purposes.</p>
+    </div>
+
+    <h2>Boundary scripts at onboarding</h2>
+    <div class="card">
+      <p>Boundaries land best <strong class="t">before</strong> the first unpaid revision — at kickoff and deposit.</p>
+      <p>Cover in writing (email or kickoff doc):</p>
+      <ul>
+        <li>What the fixed fee includes (screens, rounds, formats)</li>
+        <li>How many review rounds and who the decision-maker is</li>
+        <li>How new asks are logged and priced</li>
+        <li>What “done” / acceptance looks like</li>
+      </ul>
+      <p>A short script beats a long lecture: <em>“Happy to explore that — I’ll log it as a change request and send options (absorb / change order / later phase) within one business day.”</em> Clients who hate that sentence are telling you how the project will feel.</p>
+      <p>Upstream, a clear discovery→proposal handoff reduces surprise asks later. If you sell discovery separately, keep it linked to paid scope — see <a href="../../packs/discovery-proposal-kit/">Discovery→Proposal Kit</a>.</p>
+    </div>
+
+    <h2>Weekly CR review</h2>
+    <div class="card">
+      <p>Once a week, open the Change Request view — not your entire Notion workspace.</p>
+      <ul>
+        <li>Anything <strong class="t">open</strong> older than 48 hours: decide absorb / change order / decline</li>
+        <li>Anything <strong class="t">approved</strong> without a new fee or date: fix the paperwork before you draw</li>
+        <li>Anything <strong class="t">absorbed</strong>: count it so “goodwill” does not become the default</li>
+      </ul>
+      <p>A short weekly pass protects more margin than another late polish.</p>
+    </div>
+
+    <h2>When to send a change order</h2>
+    <div class="card">
+      <p>Send a change order when the ask is out of scope <strong class="t">and</strong> you are willing to do the work for a defined fee and timeline.</p>
+      <p>Use a change order (not a vague “sure”) when:</p>
+      <ul>
+        <li>Effort is more than a trivial tweak (your threshold — for example, more than 30–60 minutes)</li>
+        <li>It adds screens, flows, or platforms</li>
+        <li>It reopens a closed milestone</li>
+        <li>A new stakeholder invalidates prior approvals</li>
+      </ul>
+      <p>Decline or park for a later phase when the ask breaks the deadline or the relationship pattern is one-way. Absorb only when you choose to — and still log it.</p>
+    </div>
+
+    <h2>If you want the full kit later</h2>
+    <div class="card">
+      <p><a href="../../packs/client-guard-kit/">Client Guard Kit</a> is a separate product page. It describes a Change Requests database, boundary and change-order prompts, and short SOPs for fixed-fee indie UI/product design. That page lists <strong class="t">Core at $29</strong> and marks Pro as coming soon, so Pro is not offered here.</p>
+      <p>This guide is the free checklist. The 12 warning signs, which are not this change-order note, stay on the <a href="../../packs/client-guard-kit/lead-magnet-scope-creep-red-flags.md">Scope Creep Red Flags brief</a>. After an invoice exists, the free <a href="../overdue-invoice-follow-up-sequence/">overdue invoice sequence</a> is a different page. All pack pages are on the <a href="../../packs/">packs hub</a>.</p>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card">
+      <h3>Is logging change requests confrontational?</h3>
+      <p>No. It is operational clarity. Most clients prefer a numbered option over silent resentment and slipped dates.</p>
+    </div>
+    <div class="card">
+      <h3>What if the client says everything is “in spirit” of the SOW?</h3>
+      <p>Point to the written deliverables and rounds. If the SOW is vague, fix the SOW template on the next project — and still price this ask now.</p>
+    </div>
+    <div class="card">
+      <h3>Do I need a lawyer for every change?</h3>
+      <p>This page is not legal advice and does not say a change-order email is legally sufficient. It is a written record of the ask, the fee, and the timing you offered. Whether you also need a contract amendment or counsel depends on your agreement and where you work.</p>
+    </div>
+    <div class="card">
+      <h3>Will this guarantee higher income?</h3>
+      <p>No. It is a workflow to stop unpaid work. Outcomes depend on your rates, clients, and follow-through.</p>
+    </div>
+
+    <footer>
+      <p>Independent guide · Not legal advice · Not affiliated with Notion, Inc. · No income guarantee.</p>
+      <p>
+        <a href="../../packs/client-guard-kit/">Client Guard Kit</a> ·
+        <a href="../../packs/discovery-proposal-kit/">Discovery→Proposal Kit</a> ·
+        <a href="../../packs/">Digital packs</a> ·
+        <a href="../overdue-invoice-follow-up-sequence/">Invoice sequence</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
